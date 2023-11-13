@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*Selector universal (se aplica a TODA la pagina)*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*Selector de tipo (tipo de elemento -> body, h1, etc)*/
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 55px 0;
+}
+
+/*Selector de clase (.clase)*/
+.box{
+    background-color: #edefed;
+    width: 70%;
+    padding: 40px;
+    padding-right: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/*Selector de Id (tiene que ser unico)*/
+#inicio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/*Selector de hermanos adyacentes (elemento_anterior + elemento_AFECTADO, solo se le aplican los estilos al ULTIMO) Tienen que estar PEGADOS (adyacentes)*/
+h1+h2{
+   font-size: 18px; 
+}
+
+.title{
+    font-size: 35px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #dd8ebc;
+}
+
+.clase{
+    font-weight: 500;
+}
+
+section{
+    padding: 10px 0;
+}
+
+.subtitle{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 20px;
+    color: #5d8ecd;
+}
+
+.buttons_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/*Selector de atributos -> se aplica SOLO a los a que tienen el atributo target*/
+a[target]{
+    background-color: #f6bda8;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+/*Selector de atributos -> se aplica SOLO a los elementos a que tienen el valor "https://frontend30.com/css-selectors-cheatsheet/" en el atributo href*/
+a[href="https://frontend30.com/css-selectors-cheatsheet/"]{
+    background-color: #f6e5a8;
+}
+
+/*pseudo-clase:hover se usa para cuando se pasa el mouse por encima, en este caso del boton*/
+.button-game:hover{
+    background-color: #e49a80;
+}
+/*pseudo-clase:active se usa mientras se hace click*/
+.button-game:active{
+    background-color: #df7047;
+} 
+
+/*pseudo-clase:hover se usa para cuando se pasa el mouse por encima, en este caso del boton*/
+.button-cheatsheet:hover{
+    background-color: #f7de87;
+}
+/*pseudo-clase:active se usa mientras se hace click*/
+.button-cheatsheet:active{
+    background-color: #e7c33f;
+} 
+
+.formulario{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/*Selector de descendientes (ESPACIO) (todos los divs que esten contenidas por una etiqueta con clase .formulario, no tiene que ser directo)*/
+.formulario label{
+    font-weight: 500;
+}
+
+/*Selector de descendiente directo > (hijo), tiene que ser OBLIGATORIAMENTE hijo directo*/
+.formulario > div{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Pseudo-clase :last-child (puede ser first-child para primer hijo,o :nth-child() para el enesimo hijo, numero entre los parentesis*/
+.formulario div:last-child{
+    width: auto;
+    gap: 10px;
+}
+
+input{
+    width: 60%;
+    height: 30px;
+    padding: 5px;
+}
+
+/*Pseudo-clase :focus, representa un elemento (input) que le pusieron foco (le hacen click)*/
+input:focus{
+    outline: none;
+}
+
+/*Selector de hermanos ~ (selecciona el segundo(p) solo si el primero (.titulo_formulario) esta antes y los dos tienen el mismo padre (.formulario)*/
+.titulo_formulario~p{
+    font-weight: 500;
+}
+
+/*pseudo-clase que se aplica al elemento input cuando su valor es invalido (si a un input email le ponemos numeros)*/
+input:invalid{
+    background-color: #e25e2e;
+}
+
+/*pseudo-clase que se aplica al elemento input cuando su valor es valido (si a un input email le ponemos un email)*/
+input:valid{
+    background-color: #2ee234;
+} 
+
+/*pseudo-clase que aplica los estilos a los input cuando tienen un placeholder*/
+input:placeholder-shown{
+    border: 5px solid grey;
+}
+
+/*pseudo-clase que aplica los estilos a un elemento (el section en este caso) cuando su ID se encuentra en la URL (en el link de la pagina), para lograr que el id se encuentre en la url se hace con el href al id*/
+section:target{
+    border: 2px solid #3dc53d;
+}
+
+/*Pseudo-clase :not para seleccionar todos los section MENOS los que tienen la clase .info*/
+section:not(.info){
+    font-size: 20px;
+}
+
+/*pseudo-clase para seleccionar el ultimo elemento del tipo section*/
+section:last-of-type{
+    background-color:#c2bfbf
+}
+
+/*pseudo-clase para seleccionar inputs que han sido seleccionados (checkbox, radio) y elementos select-option*/
+input[type="checkbox"]:checked + label{
+    color: #e0409e;
+    text-transform: uppercase;
+}
+

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="box">
+        <header class="intro" id="inicio">
+            <h1 class="title">Selectores avanzados y pseudoclases</h1>
+            <h2 class="clase">Clase 17</h2>
+        </header>
+        <main>
+            <h2>Teoria</h2>
+            <section class="info" id="section-1">
+                <p class="subtitle">Selectores:</p>
+                <p class="text">Un selector CSS es la primera parte de una regla CSS. Es un patrón de elementos y otros términos que indican al navegador qué elementos HTML se seleccionan para aplicarles una regla que incluye los valores de las propiedades CSS. </p>
+                <ul>
+                    <li>Tipo (h1)</li>
+                    <li>Clases (.box)</li>
+                    <li>Id (#unico) </li>
+                    <li>Universal (*)</li>
+                    <li>Atributo (a[title] / a[href="www.ejemplo.com"])</li>
+                    <li>Hermanos adyacentes (+)</li>
+                    <li>Hermanos (~)</li>
+                    <li>Descendiente ( )</li>
+                    <li>Descendiente directo (>)</li>
+                </ul>
+            </section>
+            <section class="info" id="section-2">
+                <p class="subtitle">Pseudoclases:</p>
+                <p class="text">Una pseudoclase es un selector que marca los elementos que están en un estado específico, por ejemplo, los que son el primer elemento de su tipo, o aquellos por los que el cursor les pasa por encima. Tienden a actuar como si hubieras aplicado una clase en una parte determinada del documento y, a menudo, ayudan a reducir el exceso de clases y proporcionan un marcado más flexible y fácil de mantener. Las pseudoclases son palabras clave que comienzan con dos puntos.</p>
+                <ul>
+                    <li>:active</li>
+                    <li>:checked</li>
+                    <li>:first-child / :nth-child()</li>
+                    <li>:first-of-type / :nth-of-type()</li>
+                    <li>:focus</li>
+                    <li>:hover</li>
+                    <li>:invalid</li>
+                    <li>:valid</li>
+                    <li>:not</li>
+                    <li>:placeholder-shown</li>
+                    <li>:target</li>
+                </ul>
+            </section>
+            <section class="info" id="section-3">
+                <h4 class="subtitle">Pseudoelementos:</h4>
+                <ul>
+                    <li>::before</li>
+                    <li>::after</li>
+                    <li>::first-letter</li>
+                    <li>::first-line</li>
+                    <li>::placeholder</li>
+                </ul>
+                <p class="text">Los pseudoelementos se comportan de manera similar a las pseudoclases. Sin embargo, actúan como si hubieras añadido un elemento HTML totalmente nuevo en el marcado, en lugar de haber aplicado una clase nueva a los elementos presentes. Los pseudoelementos empiezan con un doble signo de dos puntos.</p>
+            </section>
+            <section class="buttons_container">
+                <!-- Atributo target que se va a usar para el css -->
+            <a class="button-cheatsheet" target="_blank" href="https://frontend30.com/css-selectors-cheatsheet/">Ver cheatsheet!</a>
+            <a class="button-game" target="_blank" href="https://flukeout.github.io/">CSS Dinner (Juego)</a>
+        </section>
+        <form class="formulario">
+            <h2 class="titulo_formulario">Formulario de prueba</h2>
+            <div>
+                <label for="1">Nombre</label>
+                <input type="text" placeholder="Clara" name="1">
+            </div>
+            <div>
+                <label for="2">Apellido</label>
+                <input class="inp" placeholder="Arguello" type="text" name="2">
+            </div>
+            <div>
+                <label for="3">Email</label>
+                <input type="email" name="3">
+            </div>
+            <div>
+                <label for="4">Numero de telefono</label>
+                <input type="number" name="4">
+            </div>
+            <p>Somos la mejor comision?</p>
+            <div>
+                <input class="check" type="checkbox" name="Si">
+                <label for="Si">Si</label>
+                <input class="check" type="checkbox" name="Obvio">
+                <label for="Obvio">Obvio</label>
+            </div>
+        </form>
+    </main>
+    </div>
+</body>
+</html>
